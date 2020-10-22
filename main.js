@@ -22,10 +22,10 @@ console.log("------")
 // Start of exercise three
 let password = "myPassword"
 let confirmPassword = "mypassword"
-if(password != confirmPassword){
+if (password != confirmPassword) {
     console.log("The two passwords are different, please try again!")
 }
-else{
+else {
     console.log("The two passwords are identical");
 }
 console.log("------")
@@ -33,11 +33,11 @@ console.log("------")
 
 // Start of excersice four
 // finding the result of 423 X 12 statement
-console.log("The result of 423 multiplied by 12 is: "+(423*12))
+console.log("The result of 423 multiplied by 12 is: " + (423 * 12))
 // finding the result of 802 / 2 statement
-console.log("The result of 802 divided by 2 is: "+(802/2))
+console.log("The result of 802 divided by 2 is: " + (802 / 2))
 // finding the result of the sum of 5 and 6, multiplied by 3 statement
-console.log("The result of the sum of 5 and 6, multiplied by 3 is: "+((5+6)*3))
+console.log("The result of the sum of 5 and 6, multiplied by 3 is: " + ((5 + 6) * 3))
 console.log("------")
 // End of exercise four
 
@@ -56,3 +56,102 @@ console.log("------")
 // Start of exercise six
 // a,b equals 0, and c equals 2
 // End of ercise six
+
+// exercise one in conditions
+let numChildren = prompt("Please enter the number of children that you have")
+let isCareful = false
+let message = ""
+let intNumChildren = parseInt(numChildren, 10)
+if (Number.isNaN(intNumChildren)) {
+    console.log("You should only enter integer values")
+}
+else {
+    if (!isCareful) {
+        intNumChildren = intNumChildren + 1
+        message += "The man is not"
+
+    } else {
+        message += "The man is "
+    }
+    message += " careful, and he has " + intNumChildren + " children"
+    console.log(message)
+}
+// end of exercise one
+
+// Exercise two
+
+let silverwareCount = prompt("Please enter any integer")
+message = ""
+if (Number.isNaN(silverwareCount)) {
+    console.log("You should only enter integer values")
+}
+else {
+    if ((silverwareCount%2) == 0) {
+        message += "Number is even"
+
+    } else {
+        message += "Number is odd"
+    }
+    console.log(message)
+}
+
+// Exercise three
+let performance = "stellar"
+let salary = 10000
+const goodBonus = 1000
+const stellarBonus = 3000
+
+if (performance == "stellar") {
+    salary+=3000
+} else {
+    salary+=1000
+}
+console.log("New salary is: "+ salary)
+
+// Exercise four
+const isVIP = false
+let cash = 500
+
+if (isVIP || cash>300) {
+    console.log("You can join the club")
+} else {
+    console.log("You can't join the club")
+}
+
+// exercise five
+// a=3, b=15, c=12, d=160
+
+// Exercise six
+const gender = null
+message = ""
+let profession = "business"
+if (gender!=null) {
+    if (gender == "female") {
+         message+="businesswoman"
+    } else if(gender == "male"){
+        message+="businessman"
+    }
+} else {
+    message+="businessperson"
+}
+console.log(message)
+
+// Exercise seven
+let boughtTesla = true
+const yearOfTeslaPurchase = 2014
+let isUSCitizen = true
+let currentYear = 2018
+
+if(boughtTesla && isUSCitizen){
+    if(currentYear-yearOfTeslaPurchase >= 4){
+        message = "Would you like to upgrade?"
+    }else{
+        message = "Are you satisfied with Tesla?"
+    }
+
+}else if(boughtTesla){
+    message = "Would you like to move to the U.S?"
+}else{
+    message = "Do you want to buy Tesla?"
+}
+console.log(message)
