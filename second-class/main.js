@@ -1,6 +1,68 @@
 
 
-task_11()
+assign_tasks()
+
+function build_buttons(numberofTasks){
+    let btns = []
+    let i
+    let btn
+    for(i=0;i<numberofTasks;i++){
+        btn = document.createElement("BUTTON") 
+        btn.innerHTML = "Task "+(i+1)                  
+        document.body.appendChild(btn)
+        document.body.appendChild(document.createElement("br"))
+        btns[i] = btn
+    }
+    return btns
+}
+
+function assign_tasks(){
+    let btns = build_buttons(11);
+    btns[0].addEventListener("click", function() {
+        console.clear()
+        task_1()
+    });
+    btns[1].addEventListener("click", function() {
+        console.clear()
+        task_2()
+    });
+    btns[2].addEventListener("click", function() {
+        console.clear()
+        task_3()
+    });
+    btns[3].addEventListener("click", function() {
+        console.clear()
+        task_4()
+    });
+    btns[4].addEventListener("click", function() {
+        console.clear()
+        task_5()
+    });
+    btns[5].addEventListener("click", function() {
+        console.clear()
+        task_6()
+    });
+    btns[6].addEventListener("click", function() {
+        console.clear()
+        task_7()
+    });
+    btns[7].addEventListener("click", function() {
+        console.clear()
+        task_8()
+    });
+    btns[8].addEventListener("click", function() {
+        console.clear()
+        task_9()
+    });
+    btns[9].addEventListener("click", function() {
+        console.clear()
+        task_10()
+    });
+    btns[10].addEventListener("click", function() {
+        console.clear()
+        task_11()
+    });
+}
 
 function task_1(){
     let names = ['Tom', 'Jerry']
