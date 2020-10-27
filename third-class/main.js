@@ -201,4 +201,40 @@ const task_8 = function(){
     deleted = splice(arr,1,0,5); 
     console.log(deleted); //should be [] 
 }
-task_8()
+
+const prepareString = function(story, specialChars){
+     // Can do it with regular expressions
+    // let pattern = /[ .,'"?!;]/
+    // const tokens = story.split(pattern)
+    // Remove any special characters
+    let modified = story
+    for(let i=0; i<specialChars.length; i++){
+        modified = modified.replaceAll(specialChars[i], '')
+    }
+    modified = modified.toLowerCase()
+    return modified.split(" ")
+}
+const countWords = function(tokens){
+    const wordCounts = {}
+    for (const token of tokens) {
+        if(wordCounts[token] == undefined){
+            // if it is the first time this word is added
+            wordCounts[token]= 1
+        }else{
+            // if the word already exists
+            wordCounts[token]+=1
+        }
+        
+    }
+    return wordCounts
+}
+const big = function(){
+    const story = "In the beginning there was light. Then there were wolves. Finally there was a big fire. Ultimately, Shelob the wolf-master put out the fire with her feet. But until then, the fire caused one heck of a lot of damage."
+    const specialChars = [",", ".", "'", '"',"?", "!", ";"]
+
+    let tokens = prepareString(story, specialChars)
+    
+    console.log(countWords(tokens))
+}
+
+big()
